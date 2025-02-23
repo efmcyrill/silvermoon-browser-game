@@ -1,0 +1,10 @@
+{
+  "sounds": {
+    "shoot": "https://assets.codepen.io/21542/shoot.mp3",
+    "hit": "https://assets.codepen.io/21542/hit.mp3",
+    "ready": "https://assets.codepen.io/21542/ready.mp3",
+    "waveStart": "https://assets.codepen.io/21542/wave-start.mp3",
+    "alienDeath": "https://assets.codepen.io/21542/alien-death.mp3",
+    "levelComplete": "https://assets.codepen.io/21542/level-complete.mp3"
+  }
+}

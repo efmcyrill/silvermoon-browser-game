@@ -27,11 +27,19 @@
         .game-container {
             height: 80vh;
             max-height: 800px;
+            position: relative;
+            overflow: hidden;
         }
 
         #gameCanvas {
             width: 100%;
             height: 100%;
+            display: block;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
         }
     </style>
 </head>
@@ -196,7 +204,24 @@
         const startGameBtn = document.getElementById("startGameBtn");
         const gameContainer = document.getElementById("gameCanvas");
 
-        let game = new Game(gameContainer);
+        let game = null;
+
+        function initGame() {
+            if (game) return;
+            
+            game = new Game(gameContainer);
+            
+            // Handle window resize
+            const resizeObserver = new ResizeObserver(entries => {
+                for (const entry of entries) {
+                    if (game && game.resize) {
+                        game.resize(entry.contentRect.width, entry.contentRect.height);
+                    }
+                }
+            });
+            
+            resizeObserver.observe(gameContainer);
+        }
 
         btn.addEventListener("click", () => {
             menu.classList.toggle("hidden");
@@ -204,12 +229,13 @@
 
         openStoryBtn.addEventListener("click", () => {
             modal.classList.add("active");
+            initGame();
         });
 
         startGameBtn.addEventListener("click", () => {
             modal.classList.remove("active");
             openStoryBtn.style.display = 'none';
-            game.startGame();
+            if (game) game.startGame();
         });
 
         // Close modal when clicking outside
