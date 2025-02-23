@@ -2,7 +2,7 @@ export const WEAPONS = {
     PISTOL: {
         name: 'Pistol',
         damage: 25,
-        range: 30,
+        range: 390,
         fireRate: 1,
         color: 0x666666,
         size: { length: 0.3, width: 0.08 },
@@ -11,7 +11,7 @@ export const WEAPONS = {
     RIFLE: {
         name: 'Rifle',
         damage: 40,
-        range: 50,
+        range: 650,
         fireRate: 2,
         color: 0x444444,
         size: { length: 0.5, width: 0.1 },
@@ -20,7 +20,7 @@ export const WEAPONS = {
     PLASMA: {
         name: 'Plasma Gun',
         damage: 60,
-        range: 40,
+        range: 520,
         fireRate: 1.5,
         color: 0x00ff00,
         size: { length: 0.4, width: 0.12 },
@@ -29,7 +29,7 @@ export const WEAPONS = {
     FLAMETHROWER: {
         name: 'Flamethrower',
         damage: 80,
-        range: 20,
+        range: 260,
         fireRate: 3,
         color: 0xff4400,
         size: { length: 0.45, width: 0.15 },
@@ -38,7 +38,7 @@ export const WEAPONS = {
     RAILGUN: {
         name: 'Rail Gun',
         damage: 100,
-        range: 60,
+        range: 780,
         fireRate: 0.5,
         color: 0x0066ff,
         size: { length: 0.6, width: 0.1 },
@@ -53,7 +53,8 @@ export const ALIENS = {
         speed: 2,
         armor: 0.8,
         color: 0xff0000,
-        size: { width: 0.4, height: 0.4 }
+        size: { width: 0.4, height: 0.4 },
+        points: 100
     },
     TANK: {
         name: 'Tank',
@@ -61,7 +62,8 @@ export const ALIENS = {
         speed: 0.5,
         armor: 0.4,
         color: 0x880000,
-        size: { width: 0.8, height: 0.8 }
+        size: { width: 0.8, height: 0.8 },
+        points: 300
     },
     SPRINTER: {
         name: 'Sprinter',
@@ -69,6 +71,7 @@ export const ALIENS = {
         speed: 3,
         armor: 0.9,
         color: 0xff6600,
-        size: { width: 0.3, height: 0.3 }
+        size: { width: 0.3, height: 0.3 },
+        points: 200
     }
 };
